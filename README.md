@@ -1,15 +1,6 @@
-# 🚀 Welcome to your new awesome project!
+# Qiita公開用リポジトリ
 
-This project has been created using **webpack scaffold**, you can now run
+- npm i
+- npm start
+- npm run build
 
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
