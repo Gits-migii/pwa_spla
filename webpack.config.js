@@ -97,19 +97,29 @@ module.exports = {
 			description: 'My awesome Progressive Web App!',
 			background_color: '#000',
 			display:'fullscreen',
-			ios:{
-				'apple-mobile-web-app-title': 'SPLA PWA',
+			ios:true,
+			ios: {
+				'apple-mobile-web-app-title': 'AppTitle',
 				'apple-mobile-web-app-status-bar-style': 'black'
 			},
 			crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
 			icons: [
 				{
-					src: path.resolve(__dirname,'src/images/icons/icon-512x512.png'),
-					sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+					src: path.resolve('src/images/icons/icon-512x512.png'),
+					sizes: [120, 152, 167, 180, 1024],
+					destination: path.join('icons', 'ios'),
+					ios: true
 				},
 				{
-					src: path.resolve(__dirname,'src/images/icons/icon-512x512.png'),
-					size: '1024x1024' // you can also use the specifications pattern
+					src: path.resolve('src/images/icons/icon-512x512.png'),
+					size: 1024,
+					destination: path.join('icons', 'ios'),
+					ios: 'startup'
+				},
+				{
+					src: path.resolve('src/images/icons/icon-512x512.png'),
+					sizes: [36, 48, 72, 96, 144, 192, 512],
+					destination: path.join('icons', 'android')
 				}
 			],
 			fingerprints: false,
